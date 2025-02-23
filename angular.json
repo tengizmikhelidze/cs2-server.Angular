@@ -29,11 +29,21 @@
               {
                 "glob": "**/*",
                 "input": "public"
-              }
+              },
+              "src/config.json",
+              "src/assets/fonts",
+              "src/assets"
             ],
             "styles": [
-              "src/styles.scss"
+              "src/styles.scss",
+              "src/styles/fonts/fonts.scss",
+              "src/styles/reset/reset.scss"
             ],
+            "stylePreprocessorOptions": {
+              "includePaths": [
+                "src/styles/mixins"
+              ]
+            },
             "scripts": []
           },
           "configurations": {
