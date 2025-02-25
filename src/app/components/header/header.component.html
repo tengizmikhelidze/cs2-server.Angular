@@ -18,5 +18,13 @@
     <div class="header__logo__text">10GGO</div>
   </div>
 
-  <div class="header__actions"></div>
+  <div class="header__actions">
+    <div class="header__actions__action">
+      <button mat-button [matMenuTriggerFor]="menu">Menu</button>
+      <mat-menu #menu="matMenu">
+        <button mat-menu-item>Item 1</button>
+        <button mat-menu-item>Item 2</button>
+      </mat-menu>
+    </div>
+  </div>
 </header>

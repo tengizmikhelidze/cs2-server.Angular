@@ -3,9 +3,9 @@
   background-color: var(--header-background);
   height: 65px;
 
-  display: flex;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
   align-items: center;
-  justify-content: space-between;
 
   &__server-info {
     display: flex;
@@ -21,12 +21,17 @@
   }
 
   &__logo {
+    justify-self: center;
     &__text {
       font-size: 30px;
       letter-spacing: 5px;
       font-weight: 900;
       color: var(--color-main__100);
     }
+  }
+
+  &__actions {
+    justify-self: end;
   }
 
   p {
