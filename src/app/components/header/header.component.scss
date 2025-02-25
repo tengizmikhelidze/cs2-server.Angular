@@ -1,4 +1,45 @@
-header {
+.header {
+  padding: 0 100px;
   background-color: var(--header-background);
   height: 65px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  &__server-info {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+
+    &__info {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 10px;
+    }
+  }
+
+  &__logo {
+    &__text {
+      font-size: 30px;
+      letter-spacing: 5px;
+      font-weight: 900;
+      color: var(--color-main__100);
+    }
+  }
+
+  p {
+    color: var(--color-main__100);
+    font-size: 12px;
+  }
+
+  label {
+    color: var(--color-label-initial__100);
+    font-size: 10px;
+    font-weight: 600;
+    text-transform: uppercase;
+    line-height: 1.5;
+    letter-spacing: 1px;
+  }
 }
