@@ -1,6 +1,8 @@
+@use '@angular/material' as mat;
+@use 'material/red-theme' as *;
 @use "sass:map";
-@import "../palette/light/light-palette";
-@import "../palette/dark/red-palette";
+@use "../palette/light/light-palette" as *;
+@use "../palette/dark/red-palette" as *;
 
 
 $theme-map: (
@@ -30,30 +32,13 @@ $theme-map: (
       #{$key}: $value;
     }
   }
+
 }
 
 [data-theme="red"] {
   @each $key, $value in map.get($theme-map, "red") {
     & {
       #{$key}: $value;
-    }
-  }
-}
-
-.mat-mdc-menu-panel {
-  & {
-    background-color: var(--color-background-surface-lvl-2__100) !important;
-  }
-
-  .mat-mdc-menu-item {
-    & {
-      color: var(--color-text-surface-lvl-1__100) !important;
-    }
-
-    .mat-mdc-menu-item-text {
-      & {
-        font-family: FiraUPPB, sans-serif !important;
-      }
     }
   }
 }
