@@ -3,7 +3,10 @@
 @use "sass:map";
 @use "../palette/light/light-palette" as *;
 @use "../palette/red/red-palette" as *;
-
+@use "../palette/blue/blue-palette" as *;
+@use "../palette/green/green-palette" as *;
+@use "../palette/yellow/yellow-palette" as *;
+@use "../palette/pink/pink-palette" as *;
 
 $theme-map: (
   "light": (
@@ -13,6 +16,7 @@ $theme-map: (
     --color-main-green__100: $color-main-green__100__red,
     --color-main-blue__100: $color-main-blue__100__red,
     --color-main-pink__100: $color-main-pink__100__red,
+    --color-main-red__100: $color-main-red__100__red,
     --color-main-yellow__100: $color-main-yellow__100__red,
     --color-label-initial__100: $color-label-initial__100__light
   ),
@@ -22,9 +26,54 @@ $theme-map: (
     --color-main__100: $color-main__100__red,
     --color-main-green__100: $color-main-green__100__red,
     --color-main-blue__100: $color-main-blue__100__red,
+    --color-main-red__100: $color-main-red__100__red,
     --color-main-pink__100: $color-main-pink__100__red,
     --color-main-yellow__100: $color-main-yellow__100__red,
     --color-label-initial__100: $color-label-initial__100__red
+  ),
+  "blue": (
+    --surface-lvl-0__100: $surface-lvl-0__100__blue,
+    --header-background: $header-background__blue,
+    --color-main__100: $color-main__100__blue,
+    --color-main-green__100: $color-main-green__100__blue,
+    --color-main-red__100: $color-main-red__100__blue,
+    --color-main-blue__100: $color-main-blue__100__blue,
+    --color-main-pink__100: $color-main-pink__100__blue,
+    --color-main-yellow__100: $color-main-yellow__100__blue,
+    --color-label-initial__100: $color-label-initial__100__blue
+  ),
+  "green": (
+    --surface-lvl-0__100: $surface-lvl-0__100__green,
+    --header-background: $header-background__green,
+    --color-main__100: $color-main__100__green,
+    --color-main-green__100: $color-main-green__100__green,
+    --color-main-red__100: $color-main-red__100__green,
+    --color-main-blue__100: $color-main-blue__100__green,
+    --color-main-pink__100: $color-main-pink__100__green,
+    --color-main-yellow__100: $color-main-yellow__100__green,
+    --color-label-initial__100: $color-label-initial__100__green
+  ),
+  "yellow": (
+    --surface-lvl-0__100: $surface-lvl-0__100__yellow,
+    --header-background: $header-background__yellow,
+    --color-main__100: $color-main__100__yellow,
+    --color-main-green__100: $color-main-green__100__yellow,
+    --color-main-red__100: $color-main-red__100__yellow,
+    --color-main-blue__100: $color-main-blue__100__yellow,
+    --color-main-pink__100: $color-main-pink__100__yellow,
+    --color-main-yellow__100: $color-main-yellow__100__yellow,
+    --color-label-initial__100: $color-label-initial__100__yellow
+  ),
+  "pink": (
+    --surface-lvl-0__100: $surface-lvl-0__100__pink,
+    --header-background: $header-background__pink,
+    --color-main__100: $color-main__100__pink,
+    --color-main-green__100: $color-main-green__100__pink,
+    --color-main-red__100: $color-main-red__100__pink,
+    --color-main-blue__100: $color-main-blue__100__pink,
+    --color-main-pink__100: $color-main-pink__100__pink,
+    --color-main-yellow__100: $color-main-yellow__100__pink,
+    --color-label-initial__100: $color-label-initial__100__pink
   )
 );
 
@@ -34,19 +83,12 @@ $theme-map: (
   }
 }
 
-[data-theme="light"] {
-  @each $key, $value in map.get($theme-map, "light") {
-    & {
-      #{$key}: $value;
-    }
-  }
-
-}
-
-[data-theme="red"] {
-  @each $key, $value in map.get($theme-map, "red") {
-    & {
-      #{$key}: $value;
+@each $name, $theme in $theme-map {
+  [data-theme="#{$name}"] {
+    @each $key, $value in map.get($theme-map, "#{$name}") {
+      & {
+        #{$key}: $value;
+      }
     }
   }
 }

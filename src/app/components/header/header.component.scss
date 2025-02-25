@@ -90,6 +90,10 @@
   font-size: 16px !important;
   color: var(--color-main__100);
 
+  &.red {
+    color: var(--color-main-red__100);
+  }
+
   &.green {
     color: var(--color-main-green__100);
   }

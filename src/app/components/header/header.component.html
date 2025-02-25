@@ -21,19 +21,22 @@
   <div class="header__actions">
     <div class="header__actions__action">
       <button id="palette-menu-btn" mat-button [matMenuTriggerFor]="menu">
-        <mat-icon class="palette-icon red menu-icon">palette</mat-icon>
+        <mat-icon class="palette-icon menu-icon">palette</mat-icon>
       </button>
       <mat-menu #menu="matMenu" class="palette-menu">
-        <button mat-menu-item>
+        <button mat-menu-item (click)="setTheme(ThemeEnum.red)">
+          <mat-icon class="palette-icon red">palette</mat-icon>
+        </button>
+        <button mat-menu-item (click)="setTheme(ThemeEnum.green)">
           <mat-icon class="palette-icon green">palette</mat-icon>
         </button>
-        <button mat-menu-item>
+        <button mat-menu-item (click)="setTheme(ThemeEnum.blue)">
           <mat-icon class="palette-icon blue">palette</mat-icon>
         </button>
-        <button mat-menu-item>
+        <button mat-menu-item (click)="setTheme(ThemeEnum.yellow)">
           <mat-icon class="palette-icon yellow">palette</mat-icon>
         </button>
-        <button mat-menu-item>
+        <button mat-menu-item (click)="setTheme(ThemeEnum.pink)">
           <mat-icon class="palette-icon pink">palette</mat-icon>
         </button>
       </mat-menu>

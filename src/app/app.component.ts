@@ -1,5 +1,6 @@
-import {Component, signal} from '@angular/core';
+import {Component, inject, signal} from '@angular/core';
 import {RouterOutlet} from '@angular/router';
+import {ThemeService} from './shared/services/theme.service';
 
 @Component({
   selector: 'app-root',
@@ -10,29 +11,10 @@ import {RouterOutlet} from '@angular/router';
   styleUrl: './app.component.scss'
 })
 export class AppComponent {
-  theme = signal<'light' | 'red'>('red')
+  private themeService = inject(ThemeService)
 
   constructor() {
-    this.setInitialTheme()
+    this.themeService.setInitialTheme()
   }
 
-  setInitialTheme(){
-    this.setTheme(this.detectPrefersColorScheme());
-  }
-
-  setTheme(theme: "light" | 'red'){
-    document.body.setAttribute(
-      'data-theme',
-      theme
-    );
-    this.theme.set(theme)
-  }
-
-  detectPrefersColorScheme(): "light" | 'red' {
-    if (window.matchMedia('(prefers-color-scheme)').media !== 'not all') {
-      return window.matchMedia('(prefers-color-scheme: red)').matches ? "red" : "light";
-    } else {
-      return "light";
-    }
-  }
 }
