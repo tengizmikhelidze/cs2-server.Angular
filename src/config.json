@@ -1,5 +1,5 @@
 {
-  "apiUrl": "http://5.189.166.19:3000/",
+  "apiUrl": "https://10ggo.ge/api/",
   "baseHref": "http://localhost:4200",
   "environment": "localhost"
 }
