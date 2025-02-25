@@ -1,32 +1,16 @@
 @use "sass:map";
 @import "../palette/light/light-palette";
-@import "../palette/dark/dark-palette";
+@import "../palette/dark/red-palette";
 
 
 $theme-map: (
   "light": (
     --surface-lvl-0__100: $surface-lvl-0__100__light,
-    --header-background: $header-background__light,
-    --header-navigation-text-color__initial: $header-navigation-text-color__initial__light,
-    --header-navigation-text-color__hover: $header-navigation-text-color__hover__light,
-
-    --header-height: 70px,
-    --application-padding: 10rem,
-
-    --color-text-initial__100: $color-text-initial__100__light,
-    --theme-color: $theme-color
+    --header-background: $header-background__light
   ),
-  "dark": (
+  "red": (
     --surface-lvl-0__100: $surface-lvl-0__100__dark,
-    --header-background: $header-background__dark,
-    --header-navigation-text-color__initial: $header-navigation-text-color__initial__dark,
-    --header-navigation-text-color__hover: $header-navigation-text-color__hover__dark,
-
-    --header-height: 70px,
-    --application-padding: 10rem,
-
-    --color-text-initial__100: $color-text-initial__100__dark,
-    --theme-color: $theme-color
+    --header-background: $header-background__dark
   )
 );
 
@@ -44,8 +28,8 @@ $theme-map: (
   }
 }
 
-[data-theme="dark"] {
-  @each $key, $value in map.get($theme-map, "dark") {
+[data-theme="red"] {
+  @each $key, $value in map.get($theme-map, "red") {
     & {
       #{$key}: $value;
     }

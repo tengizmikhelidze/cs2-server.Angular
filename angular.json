@@ -101,7 +101,8 @@
               },
               "src/config.json",
               "src/assets/fonts",
-              "src/assets"
+              "src/assets",
+              "src/assets/images"
             ],
             "styles": [
               "src/styles.scss",
