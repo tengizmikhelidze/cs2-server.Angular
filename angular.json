@@ -31,11 +31,9 @@
                 "input": "public"
               },
               "src/config.json",
-              "src/assets/fonts",
               "src/assets"
             ],
             "styles": [
-              "@angular/material/prebuilt-themes/rose-red.css",
               "src/styles.scss",
               "src/styles/fonts/fonts.scss",
               "src/styles/reset/reset.scss"
@@ -101,10 +99,7 @@
                 "input": "public"
               },
               "src/config.json",
-              "src/assets/fonts",
-              "src/assets",
-              "src/assets/images",
-              "src/assets/svgs"
+              "src/assets"
             ],
             "styles": [
               "src/styles.scss",

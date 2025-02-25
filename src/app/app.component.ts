@@ -10,7 +10,7 @@ import {RouterOutlet} from '@angular/router';
   styleUrl: './app.component.scss'
 })
 export class AppComponent {
-  theme = signal<'dark' | 'light' | 'red'>('dark')
+  theme = signal<'light' | 'red'>('red')
 
   constructor() {
     this.setInitialTheme()
@@ -20,7 +20,7 @@ export class AppComponent {
     this.setTheme(this.detectPrefersColorScheme());
   }
 
-  setTheme(theme: "dark" | "light" | 'red'){
+  setTheme(theme: "light" | 'red'){
     document.body.setAttribute(
       'data-theme',
       theme
@@ -30,7 +30,7 @@ export class AppComponent {
 
   detectPrefersColorScheme(): "light" | 'red' {
     if (window.matchMedia('(prefers-color-scheme)').media !== 'not all') {
-      return window.matchMedia('(prefers-color-scheme: dark)').matches ? "red" : "light";
+      return window.matchMedia('(prefers-color-scheme: red)').matches ? "red" : "light";
     } else {
       return "light";
     }

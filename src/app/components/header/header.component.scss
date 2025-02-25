@@ -1,3 +1,34 @@
+@mixin box ($padding: 2px 30px) {
+  padding: $padding;
+  background-color: var(--surface-lvl-0__100);
+  border-radius: var(--border-radius);
+}
+
+::ng-deep {
+  .mat-mdc-menu-panel.palette-menu {
+    min-width: 38px;
+    max-width: 38px;
+
+    .mat-mdc-menu-item {
+      padding: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 30px;
+      max-height: 30px;
+
+      .mat-icon {
+        width: auto;
+        height: auto;
+      }
+
+      .mat-mdc-menu-item-text {
+        display: none;
+      }
+    }
+  }
+}
+
 .header {
   padding: 0 100px;
   background-color: var(--header-background);
@@ -16,6 +47,7 @@
       display: flex;
       flex-direction: column;
       align-items: center;
+      @include box();
     }
   }
 
@@ -36,6 +68,7 @@
   p {
     color: var(--color-main__100);
     font-size: 12px;
+    padding: 2px 10px;
   }
 
   label {
@@ -45,5 +78,31 @@
     text-transform: uppercase;
     line-height: 1.5;
     letter-spacing: 1px;
+  }
+}
+
+#palette-menu-btn {
+  min-width: auto;
+  @include box(5px 10px);
+}
+
+.palette-icon {
+  font-size: 16px !important;
+  color: var(--color-main__100);
+
+  &.green {
+    color: var(--color-main-green__100);
+  }
+
+  &.blue {
+    color: var(--color-main-blue__100);
+  }
+
+  &.yellow {
+    color: var(--color-main-yellow__100);
+  }
+
+  &.pink {
+    color: var(--color-main-pink__100);
   }
 }

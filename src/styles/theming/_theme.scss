@@ -2,7 +2,7 @@
 @use 'material/red-theme' as *;
 @use "sass:map";
 @use "../palette/light/light-palette" as *;
-@use "../palette/dark/red-palette" as *;
+@use "../palette/red/red-palette" as *;
 
 
 $theme-map: (
@@ -10,13 +10,21 @@ $theme-map: (
     --surface-lvl-0__100: $surface-lvl-0__100__light,
     --header-background: $header-background__light,
     --color-main__100: $color-main__100__light,
+    --color-main-green__100: $color-main-green__100__red,
+    --color-main-blue__100: $color-main-blue__100__red,
+    --color-main-pink__100: $color-main-pink__100__red,
+    --color-main-yellow__100: $color-main-yellow__100__red,
     --color-label-initial__100: $color-label-initial__100__light
   ),
   "red": (
-    --surface-lvl-0__100: $surface-lvl-0__100__dark,
-    --header-background: $header-background__dark,
-    --color-main__100: $color-main__100__dark,
-    --color-label-initial__100: $color-label-initial__100__dark
+    --surface-lvl-0__100: $surface-lvl-0__100__red,
+    --header-background: $header-background__red,
+    --color-main__100: $color-main__100__red,
+    --color-main-green__100: $color-main-green__100__red,
+    --color-main-blue__100: $color-main-blue__100__red,
+    --color-main-pink__100: $color-main-pink__100__red,
+    --color-main-yellow__100: $color-main-yellow__100__red,
+    --color-label-initial__100: $color-label-initial__100__red
   )
 );
 
