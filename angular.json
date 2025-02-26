@@ -59,7 +59,13 @@
                   "maximumError": "8kB"
                 }
               ],
-              "outputHashing": "all"
+              "outputHashing": "all",
+              "fileReplacements": [
+                {
+                  "replace": "src/config.json",
+                  "with": "build/config.prod.json"
+                }
+              ]
             },
             "development": {
               "optimization": false,
