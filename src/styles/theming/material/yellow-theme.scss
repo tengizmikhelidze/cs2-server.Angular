@@ -1,13 +1,13 @@
 @use '@angular/material' as mat;
-@use '../../palette/red/red-palette' as *;
+@use '../../palette/yellow/yellow-palette' as *;
 
-$my-red-palette: mat.m2-define-palette((
+$my-yellow-palette: mat.m2-define-palette((
   50: #ffe5e3,
   100: #ffbab6,
   200: #ff8c86,
   300: #ff5e56,
   400: #ff3e36,
-  500: $color-main__100__red, // Main primary color
+  500: $color-main__100__yellow, // Main primary color
   600: #e92d1f,
   700: #d0261a,
   800: #b72016,
@@ -26,7 +26,7 @@ $my-red-palette: mat.m2-define-palette((
   )
 ));
 
-$my-red-accent: mat.m2-define-palette((
+$my-yellow-accent: mat.m2-define-palette((
   50: #ffeede,
   100: #ffd6ad,
   200: #ffbb7a,
@@ -51,7 +51,7 @@ $my-red-accent: mat.m2-define-palette((
   )
 ));
 
-$my-red-warn: mat.m2-define-palette((
+$my-yellow-warn: mat.m2-define-palette((
   50: #ffe5e5,
   100: #ffb8b8,
   200: #ff8989,
@@ -76,19 +76,19 @@ $my-red-warn: mat.m2-define-palette((
   )
 ));
 
-$red-theme: mat.m2-define-light-theme((
+$yellow-theme: mat.m2-define-light-theme((
   color: (
-    primary: $my-red-palette,
-    accent: $my-red-accent,
-    warn: $my-red-warn,
+    primary: $my-yellow-palette,
+    accent: $my-yellow-accent,
+    warn: $my-yellow-warn,
   )
 ));
 
 @mixin setTheme() {
-  @include mat.all-component-themes($red-theme);
+  @include mat.all-component-themes($yellow-theme);
   html, body {
-    --mat-menu-container-color: #{$surface-lvl-1__100__red};
-    --mdc-filled-button-container-color: #{$color-main__100__red};
-    --mdc-filled-button-label-text-color: #{$color-text-button-initial__100__red}
+    --mat-menu-container-color: #{$surface-lvl-1__100__yellow};
+    --mdc-filled-button-container-color: #{$color-main__100__yellow};
+    --mdc-filled-button-label-text-color: #{$color-text-button-initial__100__yellow}
   }
 }

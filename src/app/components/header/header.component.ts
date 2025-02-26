@@ -6,6 +6,7 @@ import {ThemeEnum} from '../../shared/enums';
 import {ThemeService} from '../../shared/services';
 import {ServersInfoService} from '../../shared/services/servers-info.service';
 import {toSignal} from '@angular/core/rxjs-interop';
+import {NgTemplateOutlet} from '@angular/common';
 
 @Component({
   selector: 'app-header',
@@ -14,7 +15,8 @@ import {toSignal} from '@angular/core/rxjs-interop';
     MatMenu,
     MatMenuTrigger,
     MatMenuItem,
-    MatIcon
+    MatIcon,
+    NgTemplateOutlet
   ],
   providers: [
     ServersInfoService

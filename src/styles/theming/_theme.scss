@@ -1,5 +1,9 @@
 @use '@angular/material' as mat;
-@use 'material/red-theme' as *;
+@use 'material/red-theme' as red-theme;
+@use 'material/green-theme' as green-theme;
+@use 'material/pink-theme' as pink-theme;
+@use 'material/blue-theme' as blue-theme;
+@use 'material/yellow-theme' as yellow-theme;
 @use "sass:map";
 @use "../palette/light/light-palette" as *;
 @use "../palette/red/red-palette" as *;
@@ -80,6 +84,24 @@ $theme-map: (
 :root {
   @each $key, $value in map.get($theme-map, "light") {
     #{$key}: $value;
+  }
+}
+
+@mixin setThemes($name) {
+  @if($name == "red") {
+    @include red-theme.setTheme();
+  }
+  @if($name == "green") {
+    @include green-theme.setTheme();
+  }
+  @if($name == "blue") {
+    @include blue-theme.setTheme();
+  }
+  @if($name == "pink") {
+    @include pink-theme.setTheme();
+  }
+  @if($name == "yellow") {
+    @include yellow-theme.setTheme();
   }
 }
 

@@ -10,7 +10,6 @@ html, body, div, span, object, iframe, figure, h1, h2, h3, h4, h5, h6, p, blockq
   text-rendering: optimizeSpeed;
   -webkit-font-smoothing: antialiased;
   font-family: 'NotoSansGeorgian', sans-serif;
-  color: var(--color-main__100);
 }
 
 .material-icons {
@@ -28,12 +27,10 @@ button {
   outline: none;
   box-shadow: none;
   border: none;
-  color: #ffffff;
 }
 
 a {
   text-decoration: none;
-  color: #fff;
 }
 
 label {
@@ -42,8 +39,6 @@ label {
   font-weight: 400;
   line-height: 24px;
   font-size: 16px;
-
-  color: #666666;
 }
 
 .mat-icon {

@@ -48,6 +48,10 @@
       flex-direction: column;
       align-items: center;
       @include box();
+
+      p {
+        color: var(--color-main__100);
+      }
     }
   }
 
@@ -63,10 +67,13 @@
 
   &__actions {
     justify-self: end;
+
+    display: flex;
+    align-items: center;
+    gap: 10px;
   }
 
   p {
-    color: var(--color-main__100);
     font-size: 12px;
     padding: 2px 10px;
   }
