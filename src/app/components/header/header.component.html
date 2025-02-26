@@ -9,7 +9,7 @@
       <label>მოთამაშეები</label>
     </div>
     <div class="header__server-info__info">
-      <p>{{getPlayersInfo()?.totalPlayersCount}}</p>
+      <p>{{getPlayersInfo()?.totalPlayersCount || 0}}</p>
       <label>სერვერზე</label>
     </div>
   </div>
@@ -23,7 +23,7 @@
         <ng-container *ngTemplateOutlet="themeChangeTemplate"></ng-container>
     </div>
     <div class="header__actions__action">
-        <button mat-flat-button>
+        <button mat-flat-button id="header-auth-btn">
           <mat-icon>login</mat-icon>
           <p>ავტორიზაცია</p>
         </button>

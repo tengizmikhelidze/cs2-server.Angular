@@ -117,3 +117,12 @@
     color: var(--color-main-pink__100);
   }
 }
+
+#header-auth-btn {
+  font-weight: 900;
+  font-size: 12px;
+
+  mat-icon {
+    font-weight: 900;
+  }
+}
