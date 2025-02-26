@@ -86,9 +86,8 @@ $red-theme: mat.m2-define-light-theme((
 
 @mixin setTheme() {
   @include mat.all-component-themes($red-theme);
-  html, body {
-    --mat-menu-container-color: #{$surface-lvl-1__100__red};
-    --mdc-filled-button-container-color: #{$color-main__100__red};
-    --mdc-filled-button-label-text-color: #{$color-text-button-initial__100__red}
-  }
+
+  --mat-menu-container-color: #{$surface-lvl-1__100__red};
+  --mdc-filled-button-container-color: #{$color-main__100__red};
+  --mdc-filled-button-label-text-color: #{$color-text-button-initial__100__red}
 }

@@ -82,7 +82,7 @@ $theme-map: (
 );
 
 :root {
-  @each $key, $value in map.get($theme-map, "light") {
+  @each $key, $value in map.get($theme-map, "red") {
     #{$key}: $value;
   }
 }
@@ -109,6 +109,7 @@ $theme-map: (
   [data-theme="#{$name}"] {
     @each $key, $value in map.get($theme-map, "#{$name}") {
       & {
+        @include setThemes($name);
         #{$key}: $value;
       }
     }

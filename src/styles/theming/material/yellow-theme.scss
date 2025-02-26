@@ -86,9 +86,8 @@ $yellow-theme: mat.m2-define-light-theme((
 
 @mixin setTheme() {
   @include mat.all-component-themes($yellow-theme);
-  html, body {
-    --mat-menu-container-color: #{$surface-lvl-1__100__yellow};
-    --mdc-filled-button-container-color: #{$color-main__100__yellow};
-    --mdc-filled-button-label-text-color: #{$color-text-button-initial__100__yellow}
-  }
+
+  --mat-menu-container-color: #{$surface-lvl-1__100__yellow};
+  --mdc-filled-button-container-color: #{$color-main__100__yellow};
+  --mdc-filled-button-label-text-color: #{$color-text-button-initial__100__yellow}
 }
