@@ -4,9 +4,10 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
-    "build": "ng build --configuration=production",
+    "build": "npm run replace-config && ng build",
     "watch": "ng build --watch --configuration development",
-    "test": "ng test"
+    "test": "ng test",
+    "replace-config": "copy /Y build\\config.prod.json src\\config.json"
   },
   "private": true,
   "dependencies": {
