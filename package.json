@@ -4,10 +4,10 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
-    "build": "npm run replace-config && ng build",
+    "build": "ng build && npm run replace-config",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
-    "replace-config": "copy /Y build\\config.prod.json src\\config.json"
+    "replace-config": "copy /Y build\\config.prod.json dist\\cs2-server\\browser\\config.json"
   },
   "private": true,
   "dependencies": {
