@@ -1,0 +1,55 @@
+@mixin overlay {
+  .overlay-wrapper {
+    display: block;
+
+    max-width: 560px;
+    min-width: 560px;
+
+    max-height: 440px;
+    min-height: 440px;
+
+    z-index: 1;
+
+    background: var(--overlay-background-surface-lvl-0__100);
+
+    padding: 30px;
+    border-radius: var(--border-radius);
+    border: solid 1px var(--color-background-surface-lvl-1__100);
+  }
+
+  .overlay-content {
+    width: 100%;
+    height: 100%;
+
+    position: relative;
+  }
+
+  .overlay-close-icon {
+    position: absolute;
+    top: 0;
+    right: 0;
+
+    font-size: 20px;
+    cursor: pointer;
+    text-shadow: -1px -1px 0 var(--color-main__100), 1px -1px 0 var(--color-main__100), -1px 1px 0 var(--color-main__100), 1px 1px 0 var(--color-main__100);
+    transition: .5s;
+
+    &:hover {
+      color: var(--color-main__100);
+    }
+  }
+
+  .overlay-header {
+    h2 {
+      font-size: 21px;
+      margin-bottom: 30px;
+      font-weight: 600;
+      line-height: 1.2;
+      color: var(--color-text-default__100);
+
+      span {
+        color: var(--color-main__100);
+      }
+    }
+  }
+}

@@ -1,6 +1,6 @@
 /* You can add global styles to this file, and also import other style files */
 @use "styles/theming/theme" as *;
-@use "styles/material/button.material" as *;
+@use "styles/material/index" as *;
 
 body {
   background-color: var(--surface-lvl-0__100);

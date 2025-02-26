@@ -23,7 +23,7 @@
         <ng-container *ngTemplateOutlet="themeChangeTemplate"></ng-container>
     </div>
     <div class="header__actions__action">
-        <button mat-flat-button id="header-auth-btn">
+        <button mat-flat-button id="header-auth-btn" (click)="openAuthOverlay()">
           <mat-icon>login</mat-icon>
           <p>ავტორიზაცია</p>
         </button>
