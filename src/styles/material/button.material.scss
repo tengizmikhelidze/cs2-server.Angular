@@ -2,4 +2,7 @@ body .mat-mdc-unelevated-button,
 body .mat-mdc-unelevated-button .mdc-button__ripple {
   border-radius: var(--border-radius);
   height: 40px;
+
+  background: var(--mdc-filled-button-container-color);
+  border: 2px solid var(--button-border-initial__100)
 }
