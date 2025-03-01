@@ -39,10 +39,7 @@ export class OverlayService<T> {
 
   overlayConfig(): OverlayConfig {
     return new OverlayConfig({
-      height: 'auto',
-      width: 'auto',
       panelClass: 'changeReceiptOwnerOverlay',
-      disposeOnNavigation: true,
       hasBackdrop: true,
       positionStrategy: this.positionStrategy(),
       backdropClass: 'customBackdropClass'

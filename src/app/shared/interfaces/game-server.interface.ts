@@ -53,3 +53,5 @@ export interface ServersPlayersInfo {
   execute1: PlayerResponse,
   totalPlayersCount: number
 }
+
+export const EmptyServersPlayersInfoResponse = {retake1: {playerCount: 0, players: []}, execute1: {playerCount: 0, players: []}, totalPlayersCount: 0}
