@@ -2,6 +2,28 @@
 
 @include mixins.overlay();
 
-.authorization__header {
+.overlay-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
 
+.auth-help {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  flex-direction: column;
+  font-size: 14px;
+  font-weight: 700;
+
+  label {
+    font-size: 14px;
+    color: var(--color-label-initial__100);
+  }
+
+  a {
+    color: var(--color-main__100);
+    text-decoration: underline;
+  }
 }

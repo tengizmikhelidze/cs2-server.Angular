@@ -4,24 +4,17 @@
     <div class="overlay-close-icon" (click)="closeOverlay()">✖</div>
 
     <div class="overlay-header">
-      <h2>საიტზე  <span>ავტორიზაცია</span></h2>
+      <h2>საიტზე <span>ავტორიზაცია</span></h2>
     </div>
 
-    <div class="auth-inputs">
-      <app-text-input label="Login" placeholder="შეიყვანეთ Login"></app-text-input>
-      <app-text-input label="პაროლი" placeholder="შეიყვანეთ პაროლი"></app-text-input>
+    <app-authorization-inputs></app-authorization-inputs>
+
+    <app-authorization-actions></app-authorization-actions>
+
+    <div class="auth-help">
+      <label>შეგექმნათ პრობლემა?</label>
+      <a>დაგვიკაშირდით Discord </a>
     </div>
-
-    <div class="auth-actions">
-      <div class="action action--left">
-
-      </div>
-      <div class="action action--right">
-        <button mat-flat-button>შესვლა</button>
-      </div>
-    </div>
-
-    <div class="auth-help"></div>
 
   </div>
 </div>

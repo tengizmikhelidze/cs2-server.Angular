@@ -13,10 +13,13 @@ $color-main-pink__100__green: #ff76ff;
 $color-main-yellow__100__green: #ffce2f;
 
 $color-label-initial__100__green: #ffffff80;
+$color_warn__100__green: #f2c94c;
 
 $color-text-button-initial__100__green: #101112;
 $color-text-default__100__green: #fff;
 
 $button-background__green: linear-gradient(25deg, $color-main__100__green -150%, $surface-lvl-0__100__green 50%);
+
+$warning-background__green: linear-gradient(25deg, $color_warn__100__green -150%, $surface-lvl-0__100__green 50%);
 
 $button-border-initial__100__green: #131415;

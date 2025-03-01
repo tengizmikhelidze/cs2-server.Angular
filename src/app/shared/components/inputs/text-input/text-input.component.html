@@ -1,5 +1,5 @@
 <div class="app-text-input-wrapper">
-  <mat-icon class="inputs-icon">add_circle</mat-icon>
+  <ng-content  select=".app-text-input-icon">icon</ng-content>
   <mat-form-field appearance="fill" class="app-text-input">
     <mat-label>{{ label() }}</mat-label>
     <input
