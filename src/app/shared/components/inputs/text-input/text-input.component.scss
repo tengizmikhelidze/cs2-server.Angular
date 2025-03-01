@@ -1,0 +1,37 @@
+:host {
+  display: block;
+  width: auto;
+  height: auto;
+}
+
+.app-text-input-wrapper {
+  box-shadow: 0 0 10px rgb(0 0 0 / 50%);
+  border: solid 2px var(--navbar-first-color);
+}
+
+::ng-deep.app-text-input {
+  input {
+    font-size: 12px;
+    border-radius: var(--border-radius);
+    &::placeholder {
+      font-size: 12px;
+      color: var(--color-label-initial__100);
+    }
+  }
+
+  .mdc-line-ripple {
+    display: none;
+  }
+
+  .mat-mdc-form-field-bottom-align {
+    display: none;
+  }
+}
+
+mat-icon.inputs-icon {
+  color: var(--color-label-initial__100);
+}
+
+mat-label {
+  font-size: 14px;
+}

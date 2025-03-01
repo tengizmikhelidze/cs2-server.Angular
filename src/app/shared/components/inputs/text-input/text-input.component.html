@@ -1,0 +1,16 @@
+<div class="app-text-input-wrapper">
+  <mat-icon class="inputs-icon">add_circle</mat-icon>
+  <mat-form-field appearance="fill" class="app-text-input">
+    <mat-label>{{ label() }}</mat-label>
+    <input
+      matInput
+      [class]="inputClass()"
+      [id]="inputId()"
+      [type]="type()"
+      [value]="value"
+      (input)="onInputEvent($event)"
+      (blur)="onTouched()"
+      [placeholder]="placeholder()"
+    />
+  </mat-form-field>
+</div>

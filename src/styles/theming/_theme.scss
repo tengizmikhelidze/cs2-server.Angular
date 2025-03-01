@@ -24,7 +24,11 @@ $theme-map: (
     --button-border-initial__100: $button-border-initial__100__red,
     --mat-menu-container-color: $surface-lvl-1__100__red,
     --mdc-filled-button-container-color: $button-background__red,
-    --mdc-filled-button-label-text-color: $color-main__100__red
+    --mdc-filled-button-label-text-color: $color-main__100__red,
+    --mdc-filled-text-field-label-text-color: $color-main__100__red,
+    --mdc-filled-text-field-focus-label-text-color: $color-main__100__red,
+    --mdc-filled-text-field-input-text-color: $color-text-default__100__blue,
+    --mdc-filled-text-field-hover-label-text-color: $color-main__100__red
   ),
   "blue": (
     --surface-lvl-0__100: $surface-lvl-0__100__blue,
@@ -44,7 +48,11 @@ $theme-map: (
     --button-border-initial__100: $button-border-initial__100__blue,
     --mat-menu-container-color: $surface-lvl-1__100__blue,
     --mdc-filled-button-container-color: $button-background__blue,
-    --mdc-filled-button-label-text-color: $color-main__100__blue
+    --mdc-filled-button-label-text-color: $color-main__100__blue,
+    --mdc-filled-text-field-label-text-color: $color-main__100__blue,
+    --mdc-filled-text-field-focus-label-text-color: $color-main__100__blue,
+    --mdc-filled-text-field-input-text-color: $color-text-default__100__blue,
+    --mdc-filled-text-field-hover-label-text-color: $color-main__100__blue
   ),
   "green": (
     --surface-lvl-0__100: $surface-lvl-0__100__green,
@@ -62,7 +70,11 @@ $theme-map: (
     --button-border-initial__100: $button-border-initial__100__green,
     --mat-menu-container-color: $surface-lvl-1__100__green,
     --mdc-filled-button-container-color: $button-background__green,
-    --mdc-filled-button-label-text-color: $color-main__100__green
+    --mdc-filled-button-label-text-color: $color-main__100__green,
+    --mdc-filled-text-field-label-text-color: $color-main__100__green,
+    --mdc-filled-text-field-focus-label-text-color: $color-main__100__green,
+    --mdc-filled-text-field-input-text-color: $color-text-default__100__blue,
+    --mdc-filled-text-field-hover-label-text-color: $color-main__100__green
   ),
   "yellow": (
     --surface-lvl-0__100: $surface-lvl-0__100__yellow,
@@ -80,7 +92,11 @@ $theme-map: (
     --button-border-initial__100: $button-border-initial__100__yellow,
     --mat-menu-container-color: $surface-lvl-1__100__yellow,
     --mdc-filled-button-container-color: $button-background__yellow,
-    --mdc-filled-button-label-text-color: $color-main__100__yellow
+    --mdc-filled-button-label-text-color: $color-main__100__yellow,
+    --mdc-filled-text-field-label-text-color: $color-main__100__yellow,
+    --mdc-filled-text-field-focus-label-text-color: $color-main__100__yellow,
+    --mdc-filled-text-field-input-text-color: $color-text-default__100__blue,
+    --mdc-filled-text-field-hover-label-text-color: $color-main__100__yellow
   ),
   "pink": (
     --surface-lvl-0__100: $surface-lvl-0__100__pink,
@@ -98,7 +114,11 @@ $theme-map: (
     --button-border-initial__100: $button-border-initial__100__pink,
     --mat-menu-container-color: $surface-lvl-1__100__pink,
     --mdc-filled-button-container-color: $button-background__pink,
-    --mdc-filled-button-label-text-color: $color-main__100__pink
+    --mdc-filled-button-label-text-color: $color-main__100__pink,
+    --mdc-filled-text-field-label-text-color: $color-main__100__pink,
+    --mdc-filled-text-field-focus-label-text-color: $color-main__100__pink,
+    --mdc-filled-text-field-input-text-color: $color-text-default__100__blue,
+    --mdc-filled-text-field-hover-label-text-color: $color-main__100__pink
   )
 );
 
