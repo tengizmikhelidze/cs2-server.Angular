@@ -4,6 +4,7 @@
     <mat-label>{{ label() }}</mat-label>
     <input
       matInput
+      [autocomplete]='autocomplete()'
       [class]="inputClass()"
       [id]="inputId()"
       [type]="type()"

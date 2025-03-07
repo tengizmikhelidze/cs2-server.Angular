@@ -23,6 +23,7 @@ import {MatInput} from '@angular/material/input';
 export class TextInputComponent implements ControlValueAccessor {
   label = input<string>("");
   placeholder = input<string>("");
+  autocomplete = input<string>("");
   type = input<'text' | 'email' | 'password'>('text');
   disabled = model<boolean>(false);
   inputId = model<string>('');
