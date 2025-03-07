@@ -7,7 +7,11 @@ import {IAuthentication} from '../interfaces';
 export class AuthenticationService {
   private https = inject(HttpClient)
 
-  registerUser(req: IAuthentication) {
+  register(req: IAuthentication) {
     return this.https.post<IAuthentication>(`${environment.authUrl}/register`, req);
+  }
+
+  login(req: IAuthentication) {
+    return this.https.post<IAuthentication>(`${environment.authUrl}/login`, req);
   }
 }

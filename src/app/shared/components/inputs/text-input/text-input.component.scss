@@ -2,12 +2,25 @@
   display: block;
   width: auto;
   height: auto;
+
+  &.ng-invalid.ng-touched {
+    ::ng-deep {
+      .app-text-input-icon {
+        color: var(--color-main__50);
+      }
+    }
+
+    .app-text-input-wrapper {
+      border: 2px solid var(--color-main__50);
+    }
+  }
 }
 
 .app-text-input-wrapper {
+  box-sizing: border-box;
   padding: 0 5px;
   box-shadow: 0 0 10px rgb(0 0 0 / 50%);
-  border: solid 2px var(--navbar-first-color);
+  border: 2px solid var(--navbar-first-color);
 }
 
 ::ng-deep.app-text-input {

@@ -4,7 +4,7 @@ import {MatIcon} from "@angular/material/icon";
 import {NgOptimizedImage} from "@angular/common";
 import {AuthFormService} from '../form/auth-form.service';
 import {AuthenticationService} from '../../../shared/services/authentication.service';
-import {Subscription, take} from 'rxjs';
+import {take} from 'rxjs';
 
 @Component({
   selector: 'app-authorization-actions',
@@ -21,8 +21,20 @@ export class AuthorizationActionsComponent {
   private readonly authenticationService = inject(AuthenticationService)
   private readonly authFormService = inject(AuthFormService)
 
-  register(): Subscription {
-    return this.authenticationService.registerUser(this.authFormService.authForm.getRawValue())
+  checkFormValidity() {
+    const valid = this.authFormService.authForm.valid;
+
+    if(!valid) {
+      this.authFormService.authForm.markAllAsTouched();
+    }
+
+    return valid;
+  }
+
+  register() {
+    if(!this.checkFormValidity()) return;
+
+    this.authenticationService.register(this.authFormService.authForm.getRawValue())
       .pipe(
         take(1)
       )
@@ -30,6 +42,12 @@ export class AuthorizationActionsComponent {
   }
 
   login() {
+    if(!this.checkFormValidity()) return;
 
+    this.authenticationService.login(this.authFormService.authForm.getRawValue())
+      .pipe(
+        take(1)
+      )
+      .subscribe()
   }
 }
