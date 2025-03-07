@@ -1,5 +1,6 @@
 {
   "apiUrl": "http://localhost:3000/api",
+  "authUrl": "http://localhost:3000/api/auth",
   "baseHref": "http://localhost:4200",
   "environment": "localhost"
 }

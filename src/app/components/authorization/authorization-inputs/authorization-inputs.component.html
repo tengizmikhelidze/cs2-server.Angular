@@ -1,8 +1,14 @@
-<div class="auth-inputs">
-  <app-text-input label="Login" placeholder="შეიყვანეთ Login">
+<form class="auth-inputs" [formGroup]="authFormService.authForm">
+  <app-text-input label="Login"
+                  placeholder="შეიყვანეთ Login"
+                  formControlName="email">
     <mat-icon class="app-text-input-icon">mail</mat-icon>
   </app-text-input>
-  <app-text-input label="პაროლი" placeholder="შეიყვანეთ პაროლი">
+
+  <app-text-input label="პაროლი"
+                  type="password"
+                  placeholder="შეიყვანეთ პაროლი"
+                  formControlName="password">
     <mat-icon class="app-text-input-icon">password</mat-icon>
   </app-text-input>
-</div>
+</form>
